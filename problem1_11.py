@@ -33,6 +33,9 @@ for eta in eta:
                 u = u_arr[i-1]
                 theta = theta_arr[i-1]
                 
+                # Theta = 0 (same as pi)
+                # theta = 0
+                
                 u_arr[i] = abs(u + eta*np.sin(theta))
                 theta_arr[i] = (theta + 2*np.pi / (u + eta*np.sin(theta))) % 2*np.pi
             axes[eta-1].plot(u_arr, theta_arr)
